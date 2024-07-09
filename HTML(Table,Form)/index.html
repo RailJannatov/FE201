@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTMl Form Table</title>
+    <style>
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div>
+      
+      <iframe title="This is my website" src="https://oxu.az/" frameborder="5" width="50%" height="200px"></iframe>
+    </div>
+    <div>
+      <a href="https://www.youtube.com/" target="_blank"
+        >Click me and go to youtube</a
+      >
+    </div>
+    <iframe src="https://www.youtube.com/" frameborder="0"></iframe> -->
+    <!-- <table>
+      <thead>
+        <tr>
+          <th>Car name</th>
+          <th colspan="2">Model</th>
+
+          <th>Price</th>
+          <th>HP</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td rowspan="2">BMW</td>
+          <td>F10</td>
+          <td>30000$</td>
+          <td>245</td>
+        </tr>
+       
+        <tr>
+          <td>G80</td>
+          <td>60000$</td>
+          <td>252</td>
+        </tr>
+        <tr>
+          <td rowspan="2">Tesla</td>
+          <td>X</td>
+          <td>100000</td>
+          <td rowspan="2">280</td>
+        </tr>
+        <tr>
+          <td>Y</td>
+          <td>80000</td>
+        </tr>
+      </tbody>
+    </table> 
+
+  <table>
+      <thead>
+        <tr>
+          <th rowspan="2"></th>
+          <th colspan="2">Average</th>
+          <th rowspan="2">other category</th>
+        </tr>
+        
+      
+      
+        <tr>
+          <td>height</td>
+          <td>weight</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>males</td>
+            <td>height</td>
+            <td>0.003</td>
+            <td>yyy</td>
+        </tr>
+        <tr>
+            <td>females</td>
+            <td>1.9</td>
+            <td>0.002</td>
+            <td>xxx</td>
+        </tr>
+    </tbody>
+    
+    </table> -->
+
+    <form action="#" >
+      <div>
+        <label for="name">Username</label>
+        <input type="text" name="username" id="name" placeholder="name" required autocomplete="off" />
+      </div>
+      <div>
+        <label for="surname">Surname</label>
+        <input type="text" name="surname" id="surname" placeholder="surnmae" required autocomplete="off" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" required >
+    </div>
+    <div>
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" value="aghakishi">
+        <input type="radio" name="gender" value="aghanatiq">
+    </div>
+    <div>
+        <label> File</label>
+        <input type="file" multiple accept=".jpeg,.png">
+    </div>
+    <div>
+        <label>BMW</label>
+        <input type="checkbox" value="BMW">
+        <label>MErcedes</label>
+        <input type="checkbox" value="MErcedes">
+    </div>
+    <div>
+       <input type="date" id="start" name="trip-start" value="1997-07-22" min="2020-01-01" max="2024-01-01">
+    </div>
+    <div>
+        <input type="number" min="50" max="100" minlength="5">
+    </div>
+    <div>
+        <input type="submit" value="save">
+    </div>
+    </form>
+  </body>
+</html>

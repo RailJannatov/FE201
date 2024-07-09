@@ -1,0 +1,15 @@
+.color-green {
+  color: green;
+  background-color: red;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+p.color-green{
+    margin: 50px;
+}
+
+

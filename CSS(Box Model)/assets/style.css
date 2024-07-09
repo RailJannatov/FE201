@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .inline-wrapper{
+background-color: red;
+padding: 10px;
+display: inline-block;
+} */
+/* div{
+    background-color: red;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+div p{
+    text-overflow: ellipsis;
+} */
+/* 
+h1,h4{
+    font-weight: 600;
+} */
+
+/* span{
+    border: 1px solid black;
+    background-color: rgb(191, 180, 180);
+    display: inline-block;
+    width: 69px;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+} */
+
+/* .wrapper {
+  width: 200px;
+  height: 200px;
+  border: 4px solid black;
+}
+
+.orange{
+    background-color: orange;
+    padding: 10px 20px;
+    margin: 40px 40px 20px 40px;
+}
+
+.red{
+    padding: 10px;
+    margin-top: 20px;
+    background-color: red;
+} */
