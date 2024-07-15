@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+} */
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  border: 1px dashed black;
+  font-size: 25px;
+  margin-left: 150px;
+  margin-top: 200px;
+
+  /* transition: all 5s ease-in; */
+  /* transition-property: transform;
+  transition-duration: 5s;
+  transition-timing-function: ease-in;
+  transition-delay: 2s; */
+}
+
+/* .box:hover {
+
+
+
+
+  transform: scaleX(1.5);
+  background-color: green;
+  margin-left: 450px;
+} */
+
+@keyframes toLeft {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(250px, 0);
+    background-color: green;
+  }
+  50% {
+    transform: translate(550px, 0);
+    background-color: blue;
+    font-size: 45px;
+  }
+  75% {
+    transform: translate(550px, 0);
+    background-color: orange;
+    font-size: 10px;
+    color: white;
+  }
+  99% {
+    background-color: pink;
+  width: 0;
+  height: 0;
+  }
+}
+
+.box {
+  animation: toLeft 9s ease-out 1s 1;
+  transform: translate(450px, 0);
+  /* animation-name: toLeft;
+    animation-duration: 6s;
+    animation-timing-function: ease-in;
+    animation-delay: 3s; */
+}
