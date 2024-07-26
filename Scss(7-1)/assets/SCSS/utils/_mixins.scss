@@ -1,0 +1,8 @@
+@mixin primaryBtn($padding:10px 16px) {
+    background-color: $primary-color;
+    padding:$padding;
+    border:1px solid $primary-color;
+    border-radius: .25rem;
+    color:$white-color;
+    font-family: $font-display;
+}
