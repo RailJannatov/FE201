@@ -75,3 +75,23 @@
 //     this.innerText = h1InnerText;
 //   });
 // });
+
+function letterCount(name) {
+  let obj = {};
+  for (let letter of name) {
+    if (obj[letter] == undefined) {
+      obj[letter] = 1;
+    } else {
+      obj[letter] += 1;
+    }
+  }
+  return obj;
+}
+console.log(letterCount("ƏFSANƏ"));
+
+// let car = {
+//   name: "BMW",
+//   age: 13,
+// };
+
+// car["test"] = "quran olum";
