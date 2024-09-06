@@ -1,0 +1,17 @@
+.dragBox{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    margin-bottom: 5px;
+}
+.dropBox{
+    /* width: 400px; */
+    height: 200px;
+    background-color: gray;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    flex: 1;
+}
