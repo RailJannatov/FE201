@@ -1,0 +1,68 @@
+header .logo h1 {
+  font-size: 16px;
+}
+header .navigation .navigation-list {
+  display: flex;
+  list-style-type: none;
+}
+header .navigation .navigation-list li {
+  margin-right: 15px;
+}
+header .navigation .navigation-list li:last-child {
+  margin: 0;
+}
+header .navigation .navigation-list a {
+  text-decoration: none;
+}
+header .wrapper-btn {
+  display: flex;
+  gap: 10px;
+}
+header .wrapper-btn .primary-btn {
+  background-color: rgb(0, 90, 255);
+  padding: 10px 16px;
+  border: 1px solid rgb(0, 90, 255);
+  border-radius: 0.25rem;
+  color: #fff;
+  font-family: " SF Pro Display Regular";
+}
+header .wrapper-btn .secondary-btn {
+  background-color: transparent;
+  border-color: #fff;
+  padding: 16px;
+}
+
+@media (min-width: 1100px) and (max-width: 1400px) {
+  header .logo h1 {
+    font-size: 40px;
+  }
+}
+#services .wrapper-card {
+  padding: 0 12px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1500px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+}
+
+.col-3 {
+  width: 25%;
+}/*# sourceMappingURL=main.css.map */
