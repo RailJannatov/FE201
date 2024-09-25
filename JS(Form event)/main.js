@@ -46,7 +46,7 @@
 
 // let submitInput = document.querySelector("#form");
 
-let textInput = document.querySelector("#inputValue");
+// let textInput = document.querySelector("#inputValue");
 
 // textInput.onblur = function () {
 //   console.log("onblurrrrr");
@@ -114,8 +114,8 @@ let textInput = document.querySelector("#inputValue");
 //   console.log("onkeypress");
 // });
 
-let btn = document.querySelector("button");
-let listItems = document.querySelectorAll(".list-item");
+// let btn = document.querySelector("button");
+// let listItems = document.querySelectorAll(".list-item");
 
 // btn.onclick = function (event) {
 //   event.preventDefault();
@@ -125,20 +125,83 @@ let listItems = document.querySelectorAll(".list-item");
 //   this.innerText = "Initial";
 // };
 
-let isAdded = false;
+// let isAdded = false;
 
-listItems.forEach((list) => {
-  list.onclick = function () {
-    let newDiv;
-    if (!isAdded) {
-      newDiv = document.createElement("div");
-      newDiv.setAttribute("id", "wrapperItem");
-      document.querySelector("form").append(newDiv);
-      newDiv.append(this.innerText);
-    } else {
-      let div = document.getElementById("wrapperItem");
-      div.append(list.innerText);
-    }
-    isAdded = true;
+// listItems.forEach((list) => {
+//   list.onclick = function () {
+//     let newDiv;
+//     if (!isAdded) {
+//       newDiv = document.createElement("div");
+//       newDiv.setAttribute("id", "wrapperItem");
+//       document.querySelector("form").append(newDiv);
+//       newDiv.append(this.innerText);
+//     } else {
+//       let div = document.getElementById("wrapperItem");
+//       div.append(list.innerText);
+//     }
+//     isAdded = true;
+//   };
+// });
+
+const form = document.querySelector("form");
+const inputs = document.querySelectorAll(".input-validation");
+const submitBtn = document.getElementById("btn");
+const tBody = document.querySelector("tbody");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  let nameElement = document.querySelector("#name");
+  let surNameElement = document.querySelector("#surname");
+  let ageElement = document.querySelector("#age");
+  validation(nameElement);
+  validation(surNameElement);
+  validation(ageElement);
+
+  addRow(
+    ++tBody.children.length,
+    nameElement.value,
+    surNameElement.value,
+    ageElement.value
+  );
+  this.reset();
+});
+
+inputs.forEach((inputElement) => {
+  inputElement.onkeyup = function () {
+    validation(this);
+    checkInputs();
   };
 });
+
+function checkInputs() {
+  let isValid = true;
+
+  inputs.forEach((el) => {
+    if (el.value.trim() === "") {
+      submitBtn.setAttribute("disabled", true);
+      isValid = false;
+    }
+    if (isValid) {
+      submitBtn.removeAttribute("disabled");
+    }
+  });
+}
+
+function validation(element) {
+  if (element.value.trim() === "") {
+    element.nextElementSibling.classList.remove("hidden");
+  } else {
+    element.nextElementSibling.classList.add("hidden");
+  }
+}
+
+function addRow(index, name, surname, age) {
+  let tr = `<tr>
+                  <td class="border border-slate-700 ...">${index}</td>
+                  <td class="border border-slate-700 ...">${name}</td>
+                  <td class="border border-slate-700 ...">${surname}</td>
+                  <td class="border border-slate-700 ...">${age}</td>
+                  <td><i class="fa-solid fa-trash"></i></td>
+            </tr>`;
+  tBody.innerHTML += tr;
+}
