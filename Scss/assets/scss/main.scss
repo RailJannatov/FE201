@@ -1,0 +1,28 @@
+
+@import "./variables";
+@import "./header";
+@import "./mixins";
+
+%layout-extends{
+    display: flex;
+    justify-self: center;
+    height: 100vh;
+    background-color: blue;
+}
+
+.col-2{
+    width: calc(100% / 12 * 2);
+}
+
+.col-8{
+    width: calc(100% / 12 * 8);
+}
+
+#categories {
+  @include layout(orange,center);
+}
+#cards{
+    // @include layout(red);
+    @extend %layout-extends;
+   
+}

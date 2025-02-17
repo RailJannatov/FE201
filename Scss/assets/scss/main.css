@@ -1,0 +1,53 @@
+header .container {
+  width: 1500px;
+  margin: 0 auto;
+}
+header .container .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+header .container ul {
+  display: flex;
+  list-style-type: none;
+}
+header .container ul li {
+  font-size: 45px;
+}
+header .container .logo {
+  font-size: 45px;
+  color: blue;
+}
+header .container .apply-btn button {
+  color: blue;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+@media (min-width: 460px) and (max-width: 560px) {
+  header .container .logo {
+    color: red;
+  }
+}
+#cards {
+  display: flex;
+  justify-self: center;
+  height: 100vh;
+  background-color: blue;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+}
+
+#categories {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: orange;
+  align-items: center;
+}/*# sourceMappingURL=main.css.map */

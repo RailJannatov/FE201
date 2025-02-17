@@ -1,0 +1,42 @@
+{
+    "root": true,
+    "parser": "@babel/eslint-parser",
+    "plugins": ["react", "import"],
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "airbnb",
+      "prettier"
+    ],
+    "ignorePatterns": [".eslintrc.js"],
+    "rules": {
+      "quotes": [2, "single", { "avoidEscape": true }],
+      "semi": "warn",
+      "no-shadow": "off",
+      "no-unused-vars": "warn",
+      "import/prefer-default-export": "off",
+      "no-use-before-define": "off",
+      "@next/next/no-img-element": "off",
+      "arrow-body-style": "off",
+      "spaced-comment": "warn",
+      "consistent-return": "off",
+      "no-plusplus": "off",
+      "react-hooks/exhaustive-deps": "off",
+      "no-param-reassign": "off",
+      "import/no-cycle": "off",
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": false,
+          "optionalDependencies": false,
+          "peerDependencies": false
+        }
+      ]
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
+  }
+  

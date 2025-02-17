@@ -1,0 +1,7 @@
+@mixin layout ($backgroundColor, $alignItems:center) {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: $backgroundColor;
+    align-items: $alignItems;
+}

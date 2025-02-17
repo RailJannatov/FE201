@@ -79,7 +79,7 @@
 function letterCount(name) {
   let obj = {};
   for (let letter of name) {
-    if (obj[letter] == undefined) {
+    if (obj[letter] === undefined) {
       obj[letter] = 1;
     } else {
       obj[letter] += 1;

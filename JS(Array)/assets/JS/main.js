@@ -185,27 +185,72 @@
 //   }
 // });
 
-const shipCodes = data
-  .filter((element) => element.shipAddress.country === "USA")
-  .map((item) => item.shipAddress.postalCode);
-console.log(shipCodes);
+// const shipCodes = data
+//   .filter((element) => element.shipAddress.country === "USA")
+//   .map((item) => item.shipAddress.postalCode);
+// console.log(shipCodes);
 
-const shipObject = data
-  .filter((element) => element.shipAddress.country === "USA")
-  .map((item) => {
-    return {
-      postalCode: item.shipAddress.postalCode,
-    };
-  });
+// const shipObject = data
+//   .filter((element) => element.shipAddress.country === "USA")
+//   .map((item) => {
+//     return {
+//       postalCode: item.shipAddress.postalCode,
+//     };
+//   });
+
+// const human = {
+//   name: "rail",
+//   height: 174,
+// };
+
+// let { name,...rest } = human;
+
+// const a = [1, 2, 3, 4, 5];
+
+// const shipObjectNew = data
+//   .filter((element) => element.shipAddress.country === "USA")
+//   .map(({ shipAddress: { postalCode } }) => ({ postalCode }));
+// console.log(shipObjectNew);
+
+// var d;
+// for (var i = 0; i < 3; i++) {
+//   d++;
+//   setTimeout(() => {
+//     console.log(d);
+//     console.log(i);
+//   }, 2000);
+// }
+
+// function test() {
+//   console.log(this);
+// }
+
+// const anotherWrapper = () => {
+//   console.log(this);
+// };
+
+// document.querySelector(".count").addEventListener("click", () => {
+//   console.log(this);
+// });
+
+// document.querySelector(".count").onclick = function () {
+//   console.log(this);
+// };
+
+// document.querySelector(".count").onclick = () => {
+//   console.log(this);
+// };
 
 const human = {
-  name: "rail",
-  height: 174,
+  name: "Rail",
+  surname: "Jannatov",
+  thisContext: {
+    name: "Rail",
+    test: function () {
+      let count = () => console.log(this);
+      count();
+    },
+  },
 };
 
-let { name, height } = human;
-
-const shipObjectNew = data
-  .filter((element) => element.shipAddress.country === "USA")
-  .map(({ shipAddress: { postalCode } }) => ({ postalCode }));
-console.log(shipObjectNew);
+human.thisContext.test();
